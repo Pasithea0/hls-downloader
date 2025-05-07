@@ -7,3 +7,34 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.link-card {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 600px;
+  text-decoration: none;
+  color: inherit;
+  font-family: sans-serif;
+}
+.link-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.link-card-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.link-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.link-card-description {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+}

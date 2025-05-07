@@ -122,14 +122,38 @@ export default function HomePage({ seturl, setheaders }) {
           disabled={typeof SharedArrayBuffer === "undefined"}
         >
           {typeof SharedArrayBuffer === "undefined"
-            ? "Browser doesn't support"
+            ? "Browser doesn't support or stream is protected."
             : "Download"}
         </button>
 
-        <i className="max-w-sm text-xs text-gray-500 text-center mt-2.5">
-          * by clicking the above <b>Download</b> button you are agreed that you
-          won't use this service for piracy.
-        </i>
+        <div className="w-full max-w-3xl mt-5 flex flex-col items-center space-y-4">
+          <p className="text-center py-4">
+            If the HLS downloader doesn't work, try using this Chrome extension
+            instead!
+          </p>
+
+          <a
+            href="https://chromewebstore.google.com/detail/fetchv-video-downloader-f/nfmmmhanepmpifddlkkmihkalkoekpfd"
+            className="flex border border-gray-300 rounded-xl overflow-hidden max-w-xl w-full hover:shadow-md transition"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/card.png" // assuming it's in your `public` folder
+              alt="FetchV Logo"
+              className="w-36 h-36 object-cover"
+            />
+            <div className="p-4 flex flex-col justify-center">
+              <div className="text-lg font-semibold">
+                FetchV - Video Downloader for m3u8 & hls
+              </div>
+              <div className="text-sm text-gray-600 mt-1">
+                Chrome Extension for downloading m3u8 & hls videos from
+                anywhere!
+              </div>
+            </div>
+          </a>
+        </div>
       </Layout>
 
       <Dialog
